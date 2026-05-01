@@ -4,8 +4,6 @@ import founder from "../assets/images/1738188328106.jpg"
 import Button from "../components/button";
 import { ArrowUpRight, Building2, Goal, Handshake, HeartHandshake, Megaphone, Quote, TrendingUp } from "lucide-react";
 import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { NavLink } from "react-router-dom";
 
