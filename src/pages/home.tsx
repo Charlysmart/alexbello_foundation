@@ -8,9 +8,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { NavLink } from "react-router-dom";
-// import Marquee from "react-fast-marquee";
 
-const MarqueeItem = ({ image, text }) => (
+type CardProps = {
+  image: string;
+  text: string;
+};
+
+const MarqueeItem = ({ image, text } : CardProps) => (
     <div className="h-100 rounded-4xl overflow-hidden relative lg:w-[25%] md:w-[50%] w-full shrink-0">
         <img src={image} alt={text} className="object-cover w-full h-full" />
         <div className="absolute bottom-0 backdrop-blur-md w-full h-15 flex border-t border-t-white flex-col justify-center px-3 z-100">
