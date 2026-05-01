@@ -7,10 +7,11 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+import { NavLink } from "react-router-dom";
 // import Marquee from "react-fast-marquee";
 
 const MarqueeItem = ({ image, text }) => (
-    <div className="h-100 rounded-4xl overflow-hidden relative w-[25%] shrink-0">
+    <div className="h-100 rounded-4xl overflow-hidden relative lg:w-[25%] md:w-[50%] w-full shrink-0">
         <img src={image} alt={text} className="object-cover w-full h-full" />
         <div className="absolute bottom-0 backdrop-blur-md w-full h-15 flex border-t border-t-white flex-col justify-center px-3 z-100">
             <p className="text-[1.2rem] font-medium text-white">{text}</p>
@@ -26,24 +27,40 @@ const Home = () => {
     return (
         <div>
             <Header />
-            <main className="text-gray-700 space-y-15 px-15 overflow-hidden">
-                <section className="flex mt-15  gap-5 items-center">
-                    <div className="space-y-5 w-[55%]">
-                        <h2 className="text-[2rem] font-semibold text-green-700">Alexbello Foundation</h2>
-                        <h1 className="text-[2.5rem] font-bold text-black">Restoring Hope. Transforming Lives.</h1>
+            <main className="text-gray-700 space-y-15 md:px-15 px-3 overflow-hidden">
+                <section className="flex lg:flex-row flex-col mt-15 gap-5 items-center h-fit">
+                    <div className="space-y-5 lg:w-[50%] w-full">
+                        <h2 className="md:text-[2rem] text-[1.5rem] font-semibold text-green-700">Alexbello Foundation</h2>
+                        <h1 className="md:text-[2.5rem] text-[2rem] font-bold text-black">Restoring Hope. Transforming Lives.</h1>
                         <p className="text-[1.3rem] font-md">
-                            At Alexbello Foundation, we are committed to uplifting the less privileged and creating opportunities where they are needed most. We envision a society free from poverty—where every individual, regardless of background, has access to affordable education, quality healthcare, clean water, and the support they need to achieve their dreams.
+                            At Alexbello Foundation, we are committed to uplifting the less privileged and creating opportunities where they are needed most. We envision a society free from poverty, where every individual, regardless of background, has access to affordable education, quality healthcare, clean water, and the support they need to achieve their dreams.
                         </p>
                         <Button label="Donate Now" />
                     </div>
-                    <div className="w-[45%] flex justify-center">
-                        <img src={alex} alt="alex foundation" className="w-full rounded-xl shadow-lg" />
+                    <div className="lg:w-[50%] w-full flex justify-center gap-5">
+                        <div className="w-[50%] rounded-tl-[30%] overflow-hidden rounded-br-[30%] relative">
+                            <img src={alex} alt="alex foundation" className="w-full rounded-xl shadow-lg h-full object-cover rounded-tl-[30%] rounded-br-[30%]" />
+                            <div className="bg-black w-full h-full opacity-20 top-0 absolute" />
+                            <span className="border border-white w-[98%] h-[98%] top-[2.5px] left-[2.5px] absolute rounded-tl-[30%] rounded-br-[30%]" />
+                        </div>
+                        <div className="w-[45%] md:h-100 h-70 space-y-5">
+                            <div className="h-[47%] rounded-tl-[30%] overflow-hidden rounded-br-[30%] relative">
+                                <img src={alex} alt="alex foundation" className="w-full rounded-xl shadow-lg h-full object-cover rounded-tl-[30%] rounded-br-[30%]" />
+                                <div className="bg-black w-full h-full opacity-20 top-0 absolute" />
+                                <span className="border border-white w-[98%] h-[98%] top-[2.5px] left-[2.5px] absolute rounded-tl-[30%] rounded-br-[30%]" />
+                            </div>
+                            <div className="h-[47%] rounded-tl-[30%] overflow-hidden rounded-br-[30%] relative">
+                                <img src={alex} alt="alex foundation" className="w-full rounded-xl shadow-lg h-full object-cover rounded-tl-[30%] rounded-br-[30%]" />
+                                <div className="bg-black w-full h-full opacity-20 top-0 absolute" />
+                                <span className="border border-white w-[98%] h-[98%] top-[2.5px] left-[2.5px] absolute rounded-tl-[30%] rounded-br-[30%]" />
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section className="flex w-full *:w-1/2">
+                <section className="flex lg:flex-row flex-col w-full gap-5 *:lg:w-1/2">
                     <div className="space-y-5">
-                        <h2 className="text-[2rem] font-semibold text-black">About <span className="text-green-700">Alexbello Foundation</span></h2>
-                        <p className="font-md text-[1.3rem]">
+                        <h2 className="md:text-[2rem] text-[1.5rem] font-semibold text-black">About <span className="text-green-700">Alexbello Foundation</span></h2>
+                        <p className="font-md md:text-[1.3rem] text-[1.1rem]">
                             The Alexbello Foundation, established in 2023, is a purpose-driven non-governmental organization committed to reducing poverty and addressing critical humanitarian challenges such as poor healthcare, hunger, and social inequality.
 
                             Founded by Alexander Okenwa, the foundation was built on a vision to restore hope, uplift the less privileged, and create opportunities for a better future. It focuses on empowering underserved individuals and communities through meaningful support and sustainable initiatives.
@@ -53,7 +70,7 @@ const Home = () => {
                             Though relatively new, the foundation is driven by compassion, impact, and a strong commitment to positive change. Through acts of generosity and service, Alexbello Foundation strives to build a society where everyone has equal opportunities to thrive.
                         </p>
                         <div>
-                            <section className="flex items-start text-[1.3rem]">
+                            <section className="flex items-start md:text-[1.3rem] text-[1.1rem]">
                                 <Handshake size={30} className="w-[40%]" />
                                 <div>
                                     <h2 className="font-semibold text-blue-900">Our Mission</h2>
@@ -62,12 +79,12 @@ const Home = () => {
                                     </p>
                                 </div>
                             </section>
-                            <section className="flex items-start text-[1.3rem]">
+                            <section className="flex items-start md:text-[1.3rem] text-[1.1rem]">
                                 <Goal size={30} className="w-[40%]" />
                                 <div>
                                     <h2 className="font-semibold text-blue-900">Our Vision</h2>
                                     <p>
-                                        We envision a world where every individual—regardless of background—has the opportunity to reach their full potential, live with dignity, and contribute positively to their community and society at large.
+                                        We envision a world where every individual regardless of background, has the opportunity to reach their full potential, live with dignity, and contribute positively to their community and society at large.
                                     </p>
                                 </div>
                             </section>
@@ -84,7 +101,7 @@ const Home = () => {
                             <span className="section-border" />
                         </div>
                     </div>
-                    <div className="flex *:w-1/4 gap-2">
+                    <div className="flex lg:flex-nowrap flex-wrap *:lg:w-1/4 *:md:w-[49%] *:w-full gap-2 *:transform *:hover:-translate-y-5 *:transition-transform *:duration-700 *:ease-in-out">
                         <section className="rounded-2xl p-3 flex flex-col gap-3 items-center justify-center shadow-2xl">
                             <div className="w-fit h-fit p-2 rounded-full bg-gray-300">
                                 <HeartHandshake size={50} />
@@ -129,40 +146,39 @@ const Home = () => {
                 </section>
                 <section className="flex h-30 justify-center w-full *:w-1/3">
                     <div className="flex">
-                        <p className="text-center m-auto text-[2rem]">
-                            <span className="font-bold text-[2.5rem]">1.5k</span> <br />Lives Touched
+                        <p className="text-center m-auto lg:text-[2rem] md:text-[1.5rem] text-[1rem]">
+                            <span className="font-bold lg:text-[2.5rem] md:text-[2rem] text-[1.">1.5k</span> <br />Lives Touched
                         </p>
                         <div className="w-px h-full bg-orange-600 ml-auto" />
                     </div>
                     <div className="flex">
-                        <p className="text-center m-auto text-[2rem]">
-                            <span className="font-bold text-[2.5rem]">3+</span> <br />Years of Experience
+                        <p className="text-center m-auto lg:text-[2rem] md:text-[1.5rem] text-[1rem]">
+                            <span className="font-bold lg:text-[2.5rem] md:text-[2rem] text-[1.">3+</span> <br />Years of Experience
                         </p>
                         <div className="w-px h-full bg-orange-600 ml-auto" />
                     </div>
                     <div className="flex">
-                        <p className="text-center m-auto text-[2rem]">
-                            <span className="font-bold text-[2.5rem]">50</span> <br />Teams
+                        <p className="text-center m-auto lg:text-[2rem] md:text-[1.5rem] text-[1rem]">
+                            <span className="font-bold lg:text-[2.5rem] md:text-[2rem] text-[1.">50</span> <br />Teams
                         </p>
-                        <div className="w-px h-full bg-orange-600 ml-auto" />
                     </div>
                 </section>
                 <section className="space-y-10">
                     <div className="flex justify-center">
                         <div className="section-header">
-                            <h2 className="font-bold">Our Recent <span className="text-green-500">Events</span></h2>
+                            <h2 className="font-bold">Our Recent <span className="text-green-500">Event</span></h2>
                             <span className="section-border" />
                         </div>
                     </div>
-                    <div className="flex bg-gray-100 justify-between items-center p-10 mx-10 shadow-2xl">
+                    <div className="flex lg:flex-row flex-col bg-gray-100 justify-between items-center md:p-10 p-3 lg:mx-10 md:mx-5 mx-2 shadow-2xl">
                         <div className="w-[40%] h-80">
 
                         </div>
-                        <div className="w-[55%] text-[1.3rem]">
+                        <div className="lg:w-[55%] w-full md:text-[1.3rem] text-[1.1rem]">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsum aut sed aperiam distinctio minus illo. Explicabo eum natus tempora fugit culpa est dolore laudantium sint nihil, praesentium ab odit harum aperiam? Sunt aspernatur, ipsum architecto harum qui repellat, consequuntur accusamus autem obcaecati odit asperiores non? Error praesentium ut ab?</p>
                         </div>
                     </div>
-                    <b className="text-blue-900 inline-flex justify-center w-full text-2xl">Explore More Videos<ArrowUpRight /></b>
+                    <NavLink to={"../events"}><b className="text-blue-900 inline-flex items-center gap-1 justify-center w-full md:text-2xl text-xl">Explore More Videos<ArrowUpRight /></b></NavLink>
                 </section>
                 <section className="space-y-10">
                     <div className="section-header">
@@ -171,7 +187,7 @@ const Home = () => {
                         <span className="section-border" />
                     </div>
                     <Swiper spaceBetween={30}
-                        slidesPerView={3}
+                        slidesPerView={window.innerWidth > 1280 ? 3 : window.innerWidth > 768 ? 2 : 1}
                         pagination={{clickable : true}} 
                         autoplay={{delay: 3000}}
                         loop={true}
@@ -182,10 +198,10 @@ const Home = () => {
                             <div className="h-[40%] overflow-hidden border-b-10 border-b-gray-500">
                                 <img src={alex} alt="" className="w-full h-full" />
                             </div>
-                            <div className="h-[50%] flex items-center p-6 text-[1.2rem]">
+                            <div className="h-[50%] flex items-center p-6 md:text-[1.2rem] text-[1rem]">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, saepe quasi assumenda quaerat repellat consectetur enim laudantium architecto modi reiciendis neque veniam illo asperiores odit vero ad quae libero officia?</p>
                             </div>
-                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full top-[34%] left-2">
+                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full lg:top-[34%] top-[31%] left-2">
                                 <Quote size={30} className="rotate-180" />
                             </div>
                             <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full bottom-5 right-2">
@@ -196,10 +212,10 @@ const Home = () => {
                             <div className="h-[40%] overflow-hidden border-b-10 border-b-gray-500">
                                 <img src={alex} alt="" className="w-full h-full" />
                             </div>
-                            <div className="h-[50%] flex items-center p-6 text-[1.2rem]">
+                            <div className="h-[50%] flex items-center p-6 md:text-[1.2rem] text-[1rem]">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, saepe quasi assumenda quaerat repellat consectetur enim laudantium architecto modi reiciendis neque veniam illo asperiores odit vero ad quae libero officia?</p>
                             </div>
-                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full top-[34%] left-2">
+                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full lg:top-[34%] top-[31%] left-2">
                                 <Quote size={30} className="rotate-180" />
                             </div>
                             <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full bottom-5 right-2">
@@ -210,10 +226,10 @@ const Home = () => {
                             <div className="h-[40%] overflow-hidden border-b-10 border-b-gray-500">
                                 <img src={alex} alt="" className="w-full h-full" />
                             </div>
-                            <div className="h-[50%] flex items-center p-6 text-[1.2rem]">
+                            <div className="h-[50%] flex items-center p-6 md:text-[1.2rem] text-[1rem]">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, saepe quasi assumenda quaerat repellat consectetur enim laudantium architecto modi reiciendis neque veniam illo asperiores odit vero ad quae libero officia?</p>
                             </div>
-                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full top-[34%] left-2">
+                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full lg:top-[34%] top-[31%] left-2">
                                 <Quote size={30} className="rotate-180" />
                             </div>
                             <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full bottom-5 right-2">
@@ -224,10 +240,10 @@ const Home = () => {
                             <div className="h-[40%] overflow-hidden border-b-10 border-b-gray-500">
                                 <img src={alex} alt="" className="w-full h-full" />
                             </div>
-                            <div className="h-[50%] flex items-center p-6 text-[1.2rem]">
+                            <div className="h-[50%] flex items-center p-6 md:text-[1.2rem] text-[1rem]">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, saepe quasi assumenda quaerat repellat consectetur enim laudantium architecto modi reiciendis neque veniam illo asperiores odit vero ad quae libero officia?</p>
                             </div>
-                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full top-[34%] left-2">
+                            <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full lg:top-[34%] top-[31%] left-2">
                                 <Quote size={30} className="rotate-180" />
                             </div>
                             <div className="absolute w-fit p-3 bg-blue-900 text-white rounded-full bottom-5 right-2">
