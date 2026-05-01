@@ -16,7 +16,7 @@ const Events = () => {
                     <p className="absolute bottom-5 left-5 text-white md:text-[1.3rem] text-[1.1rem] font-medium"><a href="./" className="text-white">Home</a> / <span className="text-orange-400">Events</span></p>
                 </div>
                 <h2 className="text-center font-bold text-orange-600 md:text-[2rem] text-[1.5rem] mt-10">Stay Updated with AlexBello Charity Foundation</h2>
-                <div className="flex w-full *:md:w-[48%] *:w-full py-15 lg:px-50 md:px-10 px-5 text-gray-700 justify-between lg:gap-10 gap-5 *:shrink-0 flex-wrap">
+                <div className="flex w-full *:md:w-[46%] *:w-full py-15 lg:px-50 md:px-10 px-5 text-gray-700 justify-between lg:gap-10 gap-5 *:shrink-0 flex-wrap">
                     <section className="border h-120 rounded-3xl overflow-hidden border-gray-300 bg-white">
                         <div className="h-[50%] overflow-hidden border-b border-b-gray-300">
                             <img src={outreach} alt="" className="w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-125" />
