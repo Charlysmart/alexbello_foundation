@@ -6,6 +6,8 @@ import { ArrowUpRight, Building2, Goal, Handshake, HeartHandshake, Megaphone, Qu
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { NavLink } from "react-router-dom";
+import Footer from "../components/footer";
+import Banner from "../components/banner";
 
 type CardProps = {
   image: string;
@@ -40,12 +42,12 @@ const Home = () => {
                         <Button label="Donate Now" />
                     </div>
                     <div className="lg:w-[50%] w-full flex justify-center gap-5">
-                        <div className="w-[50%] rounded-tl-[30%] overflow-hidden rounded-br-[30%] relative">
-                            <img src={alex} alt="alex foundation" className="w-full rounded-xl shadow-lg h-full object-cover rounded-tl-[30%] rounded-br-[30%]" />
+                        <div className="md:w-[50%] w-full md:rounded-tl-[30%] overflow-hidden md:rounded-br-[30%] relative rounded-3xl">
+                            <img src={alex} alt="alex foundation" className="w-full shadow-lg h-full object-cover md:rounded-tl-[30%] md:rounded-br-[30%] rounded-3xl" />
                             <div className="bg-black w-full h-full opacity-20 top-0 absolute" />
-                            <span className="border border-white w-[98%] h-[98%] top-[2.5px] left-[2.5px] absolute rounded-tl-[30%] rounded-br-[30%]" />
+                            <span className="border border-white w-[98%] h-[98%] top-[2.5px] left-[2.5px] absolute md:rounded-tl-[30%] md:rounded-br-[30%] rounded-3xl" />
                         </div>
-                        <div className="w-[45%] md:h-100 h-70 space-y-5">
+                        <div className="w-[45%] md:h-100 h-70 space-y-5 md:block hidden">
                             <div className="h-[47%] rounded-tl-[30%] overflow-hidden rounded-br-[30%] relative">
                                 <img src={alex} alt="alex foundation" className="w-full rounded-xl shadow-lg h-full object-cover rounded-tl-[30%] rounded-br-[30%]" />
                                 <div className="bg-black w-full h-full opacity-20 top-0 absolute" />
@@ -65,7 +67,7 @@ const Home = () => {
                         <p className="font-md md:text-[1.3rem] text-[1.1rem]">
                             The Alexbello Foundation, established in 2023, is a purpose-driven non-governmental organization committed to reducing poverty and addressing critical humanitarian challenges such as poor healthcare, hunger, and social inequality.
 
-                            Founded by Alexander Okenwa, the foundation was built on a vision to restore hope, uplift the less privileged, and create opportunities for a better future. It focuses on empowering underserved individuals and communities through meaningful support and sustainable initiatives.
+                            Founded by <b>Alexander Chinedum Valentine Okenwa</b>, the foundation was built on a vision to restore hope, uplift the less privileged, and create opportunities for a better future. It focuses on empowering underserved individuals and communities through meaningful support and sustainable initiatives.
 
                             By providing access to essential resources, financial assistance, and life-changing opportunities, Alexbello Foundation helps people from all walks of life improve their living conditions and pursue their dreams.
 
@@ -268,7 +270,11 @@ const Home = () => {
                         <MarqueeItem image={alex} text ="Outreach at Ngwo layout" />
                     </div>
                 </section>
-            </main>
+            </main>            
+            <section>
+                <Banner />
+            </section>
+            <Footer />
         </div>
     );
 }

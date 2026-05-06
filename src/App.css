@@ -21,6 +21,20 @@
     }
 }
 
+.banner-bg {
+    background-image: url(../public/download\ \(1\).jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
+.footer-bg {
+    background-image: url(../public/download.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
 .testimonial {
     transition: transform 300ms ease-in-out;
     will-change: transform;

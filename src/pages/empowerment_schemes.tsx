@@ -1,6 +1,8 @@
 import Header from "../components/header";
 import empowerment from "../assets/images/empowerment2.png";
 import Button from "../components/button";
+import Footer from "../components/footer";
+import Banner from "../components/banner";
 
 const EmpowermentSchemes = () => {
     return (
@@ -60,6 +62,10 @@ const EmpowermentSchemes = () => {
                     </div>
                 </section>
             </main>
+            <section>
+                <Banner />
+            </section>
+            <Footer />
         </div>
     );
 }

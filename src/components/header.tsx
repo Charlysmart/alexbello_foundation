@@ -13,11 +13,12 @@ const Header = () => {
                         <p className="text-blue-900 font-bold">AlexBello Foundation</p>
                     </div>
                 </NavLink>
-                <ul className="lg:flex hidden justify-center items-center text-[20px] text-blue-800 font-medium gap-10 w-[70%]">
+                <ul className="lg:flex hidden justify-center items-center text-[18px] text-blue-800 font-medium gap-10 w-[70%]">
                     <li><NavLink to={"../empowerment_schemes"}>Empowerment schemes</NavLink></li>
                     <li><NavLink to={"../events"}>News & Events</NavLink></li>
-                    <li><NavLink to={"../donate"}>Donate</NavLink></li>
                     <li><NavLink to={"../contact_us"}>Contact us</NavLink></li>
+                    <li><NavLink to={"../volunteer"}>Volunteer</NavLink></li>
+                    <li><NavLink to={"../donate"} className="bg-blue-900 text-white rounded-full px-5 py-3">Donate to us</NavLink></li>
                 </ul>
                 <button className="lg:hidden px-5" onClick={() => toggleMenu(!menu)}><Menu /></button>
             </nav>

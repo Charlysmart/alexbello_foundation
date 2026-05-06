@@ -2,6 +2,8 @@ import { ArrowRight } from "lucide-react";
 import outreach from "../assets/images/IMG-20260422-WA0043.jpg";
 import events from "../assets/images/file_0000000091b471f4adbb80141415295c.png";
 import Header from "../components/header";
+import Footer from "../components/footer";
+import Banner from "../components/banner";
 const Events = () => {
     return (
         <div>
@@ -46,6 +48,10 @@ const Events = () => {
                     </section>
                 </div>
             </main>
+            <section>
+                <Banner />
+            </section>
+            <Footer />
         </div>
     );
 }

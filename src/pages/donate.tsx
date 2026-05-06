@@ -1,5 +1,7 @@
 import Header from "../components/header";
 import donate from "../assets/images/donate.png";
+import Footer from "../components/footer";
+import Banner from "../components/banner";
 
 const Donate = () => {
     return (
@@ -64,6 +66,10 @@ const Donate = () => {
                     </section>
                 </div>
             </main>
+            <section>
+                <Banner />
+            </section>
+            <Footer />
         </div>
     );
 }
